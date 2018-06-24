@@ -1,6 +1,6 @@
 import './style.scss'
 import * as React from 'react'
-import { Element } from 'react-scroll'
+import { Element, scroller } from 'react-scroll'
 import Slider from 'react-slick'
 import { Component } from 'components/common'
 import { Navigation } from './navigation'
@@ -101,8 +101,9 @@ export class Home extends Component<Props, State> {
                       <li>Make a fun weekend DIY project with your kids</li>
                     </ul>
                   </div>
-                  <button className="white-btn">Get Started!</button>
-                  <button className="main-btn">Learn more</button>
+                  <button className="main-btn" onClick={ () =>
+                    scroller.scrollTo('overview', { duration: 600, smooth: true })
+                  }>Get Started!</button>
                 </div>
               </div>
 
