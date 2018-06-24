@@ -17,6 +17,12 @@ div[name=home] {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
+    div.container {
+      >div.row {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
   .home-content {
     h1 {
@@ -39,8 +45,7 @@ div[name=home] {
   }
   .silder-slave {
     .slider-item {
-      height: 50vh;
-      // cursor: pointer;
+      height: 50vh; // cursor: pointer;
       // margin: 0 15px 30px 15px;
       // padding: 15px;
       // border: 1px solid $color-gray-300;
