@@ -1,0 +1,21 @@
+@import '~styles/variables';
+div[name=seeds] {
+  .slider-item {
+    cursor: pointer;
+    margin: 0 15px 30px 15px;
+    padding: 15px;
+    border: 1px solid $color-gray-300;
+    &.selected {
+      background: $color-gray-200;
+    }
+    .image {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      background-size: cover;
+    }
+    .info {
+      margin-top: 15px;
+    }
+  }
+}

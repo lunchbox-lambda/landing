@@ -1,0 +1,35 @@
+@import '~styles/variables';
+div[name=models] {
+  .slider-item {
+    position: relative;
+    cursor: pointer;
+    min-height: 360px;
+    margin: 0 15px 30px 15px;
+    padding: 30px;
+    border: 1px solid $color-gray-300;
+    &.selected {
+      background: $color-gray-200;
+    }
+    .name {
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .description {
+      margin-bottom: 30px;
+    }
+    .bullets {
+      ul {
+        li:before {
+          content: '\2713';
+          position: relative;
+          color: $color-primary;
+          font-size: 1.6em;
+          line-height: 1em;
+          top: 4px;
+        }
+      }
+    }
+  }
+}

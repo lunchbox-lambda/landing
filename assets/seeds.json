@@ -1,0 +1,38 @@
+[
+  {
+    "id": "radish",
+    "name": "Radish",
+    "description": "",
+    "available": true
+  },
+  {
+    "id": "arugula",
+    "name": "Arugula",
+    "description": "",
+    "available": false
+  },
+  {
+    "id": "chives",
+    "name": "Chives",
+    "description": "",
+    "available": false
+  },
+  {
+    "id": "red_cabbage",
+    "name": "Red Cabbage",
+    "description": "",
+    "available": false
+  },
+  {
+    "id": "beets",
+    "name": "Beets",
+    "description": "",
+    "available": false
+  },
+  {
+    "id": "mustard_greens",
+    "name": "Mustard Greens",
+    "description": "",
+    "available": false
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "lunchbox-nano",
+    "name": "Lunchbox Nano",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do _timer switch_ tempor incididunt ut labore et dolore magna aliqua.",
+    "available": true,
+    "bullets": [
+      "Low cost",
+      "Easy to build"
+    ]
+  },
+  {
+    "id": "lunchbox-micro",
+    "name": "Lunchbox Micro",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do _Raspberry Pi_ tempor incididunt ut labore et dolore magna aliqua.",
+    "available": false,
+    "bullets": [
+      "Automation",
+      "Climate recipes"
+    ]
+  },
+  {
+    "id": "lunchbox-grow",
+    "name": "Lunchbox Grow",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, _Raspberry Pi_ and _Arduino_ sed do tempor incididunt ut labore et dolore magna aliqua.",
+    "available": true,
+    "bullets": [
+      "Automation",
+      "Climate recipes",
+      "Multiple chambers"
+    ]
+  }
+]
