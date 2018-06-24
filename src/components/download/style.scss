@@ -1,0 +1,19 @@
+@import '~styles/variables';
+div[name=download] {
+  .description-wrapper {
+    display: flex;
+    justify-content: space-around;
+    >div {
+      position: relative;
+      flex: 0 1 40%;
+      &.download-instructions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
