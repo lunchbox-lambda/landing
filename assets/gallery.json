@@ -1,0 +1,18 @@
+[
+  {
+    "id": "screenshot_dashboard",
+    "description": "Integrated Node-RED dashboard"
+  },
+  {
+    "id": "screenshot_architecture",
+    "description": "Setup your custom architecture"
+  },
+  {
+    "id": "screenshot_control_room",
+    "description": "Start growing with climate recipes"
+  },
+  {
+    "id": "screenshot_nodered",
+    "description": "Unleash the potential of Node-RED"
+  }
+]

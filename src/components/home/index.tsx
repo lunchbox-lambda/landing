@@ -6,40 +6,18 @@ import { Component } from 'components/common'
 import { Navigation } from './navigation'
 
 const images = {
-  a11111111: require('assets/cdn/33d30546-a559-4fc6-b527-b556556d52e0.jpg'),
-  b22222222: require('assets/cdn/a65736a6-d65c-474d-a541-2e22dd3d48e6.jpg'),
-  c333333333: require('assets/cdn/f7ecc8d3-9fae-43ea-bea1-7b085cb600be.jpg'),
-  d444444444: require('assets/cdn/81b6f67f-c8b4-4f02-8266-1c8261d6341f.jpg'),
-  e555555555: require('assets/cdn/7c565f9a-63e5-44ad-8928-86a147a4097d.jpg'),
-  f666666666666: require('assets/cdn/05a54a47-267c-485c-aa47-ed50c51052d2.jpg')
+  screenshot_dashboard: require('assets/cdn/screenshot_dashboard.png'),
+  screenshot_architecture: require('assets/cdn/screenshot_architecture.png'),
+  screenshot_control_room: require('assets/cdn/screenshot_control_room.png'),
+  screenshot_nodered: require('assets/cdn/screenshot_nodered.png')
 }
 
-const items = [
-  {
-    id: 'a11111111',
-    description: '11111111'
-  },
-  {
-    id: 'b22222222',
-    description: '22222222'
-  },
-  {
-    id: 'c333333333',
-    description: '333333333'
-  },
-  {
-    id: 'd444444444',
-    description: '444444444'
-  },
-  {
-    id: 'e555555555',
-    description: '555555555'
-  },
-  {
-    id: 'f666666666666',
-    description: '666666666666'
-  }
-]
+const items = require('assets/gallery.json') as GalleryItem[]
+
+interface GalleryItem {
+  id: string
+  description: string
+}
 
 interface Props { }
 
@@ -65,14 +43,15 @@ export class Home extends Component<Props, State> {
     })
   }
 
-  renderItem = (item: any) => {
+  renderItem = (item: any, master: boolean) => {
     return <div key={ item.id }>
       <div className={ `slider-item` }>
-        <div
-          className="image"
-          style={ { backgroundImage: `url(${images[item.id]})` } }
-        >
-        </div>
+        <img src={ images[item.id] }></img>
+        { master ? null :
+          <div className="slide-description">
+            { item.description }
+          </div>
+        }
       </div>
     </div>
   }
@@ -113,8 +92,7 @@ export class Home extends Component<Props, State> {
               </div>
 
               <div className="col-md-6">
-
-                <div>
+                <div className="sildeshow-holder">
 
                   <div className="silder-slave">
                     <Slider
@@ -124,31 +102,31 @@ export class Home extends Component<Props, State> {
                       dots={ false }
                       arrows={ false }
                       fade={ true }
+                      adaptiveHeight={ false }
                     >
-                      { items.map(item => this.renderItem(item)) }
+                      { items.map(item => this.renderItem(item, false)) }
                     </Slider>
                   </div>
 
                   <div className="silder-master">
                     <Slider
                       asNavFor={ this.state.sliderSlave }
-                      slidesToShow={ 3 }
+                      slidesToShow={ 4 }
                       slidesToScroll={ 1 }
                       dots={ true }
                       arrows={ true }
-                      centerMode={ true }
+                      centerMode={ false }
                       infinite={ true }
                       autoplay={ true }
+                      autoplaySpeed={ 5000 }
+                      focusOnSelect={ true }
                     >
-                      { items.map(item => this.renderItem(item)) }
+                      { items.map(item => this.renderItem(item, true)) }
                     </Slider>
                   </div>
 
                 </div>
-
-
               </div>
-
             </div>
           </div>
         </div>
