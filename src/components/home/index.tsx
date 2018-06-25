@@ -101,6 +101,11 @@ export class Home extends Component<Props, State> {
                       <li>Make a fun weekend DIY project with your kids</li>
                     </ul>
                   </div>
+                  <button className="white-btn" onClick={ () =>
+                    window.open('https://github.com/lunchbox-lambda', '_blank')
+                  }>
+                    Check me on <i className="fa fa-lg fa-github"></i>
+                  </button>
                   <button className="main-btn" onClick={ () =>
                     scroller.scrollTo('overview', { duration: 600, smooth: true })
                   }>Get Started!</button>
