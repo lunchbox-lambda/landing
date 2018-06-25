@@ -95,11 +95,11 @@ export class Home extends Component<Props, State> {
                 <div className="home-content">
                   <h1 className="white-text">Lunchbox Lambda</h1>
                   <div className="list-wrapper">
-                    <ul className="white-text">
-                      <li>Grow your own food and harvest all around the year</li>
-                      <li>Furnish your apartement with a unique modern design</li>
-                      <li>Make a fun weekend DIY project with your kids</li>
-                    </ul>
+                    <span className="white-text">
+                      A framework of DIY hardware, software and electronics
+                      projects to promote the idea of growing plants for food,
+                      indoors, in a software controlled environment.
+                    </span>
                   </div>
                   <button className="white-btn" onClick={ () =>
                     window.open('https://github.com/lunchbox-lambda', '_blank')
