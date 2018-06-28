@@ -31,15 +31,13 @@ export class Design extends Component<Props, State> {
     this.handleSubscriptions([
       app.store.getSelectedBoxSize()
         .subscribe(boxSize => {
-          // TODO: Find out update issue
-          console.log(boxSize)
           this.setState({ boxSize })
         })
     ])
   }
 
   onChange(target: string, event: React.ChangeEvent<HTMLInputElement>) {
-    const { boxSize } = this.state
+    const boxSize = { ...this.state.boxSize }
     boxSize[target] = Number.parseInt(event.target.value)
     app.store.dispatch(
       actions.setSelectedBoxSize(boxSize)
